@@ -1,16 +1,9 @@
-/* Asterly v1.0 — plain CSS, no framework or build tools.
+/* Nuvessio v1.1 — plain CSS, no framework or build tools.
    Contents: 01 Tokens · 02 Base · 03 Header · 04 Hero · 05 Courses
              06 Approach · 07 Stories · 08 FAQ / CTA · 09 Contact / Footer
              10 Responsive · 11 Motion / Print */
 
 /* 01 — DESIGN TOKENS: customize the whole palette here. */
-@font-face {
-  font-family: "Manrope";
-  src: url("../fonts/manrope-variable.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 200 800;
-  font-display: swap;
-}
 :root {
   color-scheme: light;
   --color-ink: #152d47;
@@ -24,7 +17,7 @@
   --color-peach: #f7e7da;
   --color-sage: #e8eee6;
   --color-error: #a72b30;
-  --font-body: "Manrope", "Segoe UI", Arial, sans-serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-editorial: Georgia, "Times New Roman", serif;
   --container: 1200px;
   --section-space: clamp(64px, 7.5vw, 112px);

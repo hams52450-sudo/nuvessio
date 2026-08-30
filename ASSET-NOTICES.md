@@ -1,62 +1,39 @@
-# Assets and provenance
+# Nuvessio — Assets and provenance
 
-## Template code and content
+## Template code and demonstration content
 
-The HTML, CSS, JavaScript, geometric asterisk brand mark, interface SVG icons, and course typography were written for this separate Asterly template. Its educational theme, navy/warm-orange palette, practical-course structure, and sample progress panel build on the owner's Qadam practice project. No React, shadcn, Lucide, Tailwind, third-party component source, or original Qadam image is bundled in this package.
+The HTML, CSS, JavaScript, geometric asterisk mark, interface SVG icons, and course illustrations were created for this separate learning-studio template. Its educational theme and navy/terracotta visual identity build on the owner's original practice project. No third-party component library, icon library, or stock-photo collection is bundled.
 
-Asterly is a fictional demonstration brand. Names, quotes, course durations, and the learning plan are illustrative. They are not verified testimonials, accreditation, business results, or evidence of a real organization. No trademark search or clearance is represented.
+Nuvessio is a fictional demonstration brand, not a claim of a real learning provider. Names, quotes, course durations, and the learning plan are illustrative. They are not verified testimonials, accreditation, or business results. A preliminary name search is not legal trademark clearance; the seller or buyer must arrange any clearance needed before commercial brand use.
 
-## Manrope font
+The seller supplies the applicable template license. These notices describe asset provenance and do not assign an open-source license to the template code.
 
-- File: `assets/fonts/manrope-variable.ttf`
-- Copyright 2018 The Manrope Project Authors
-- Source: https://github.com/google/fonts/tree/main/ofl/manrope
-- Upstream: https://github.com/sharanda/manrope
-- License: SIL Open Font License 1.1, included in `assets/fonts/OFL-Manrope.txt`.
+## System fonts only
 
-The font is unmodified. Keep its copyright notice and complete OFL license when redistributing it. The font license does not automatically license the template code. Georgia is only named as a system font fallback; no Georgia font file is included.
+No third-party font files are included. Body text uses a system font stack; italic accents use Georgia or a locally available serif fallback. Fonts are selected from the visitor's device, not downloaded by this template. No font license file needs to be copied or redistributed with this package. If you add a web font, check its separate redistribution requirements.
 
-## Original AI-generated demo images
+## AI-generated demonstration images
 
-The following were created specifically for this project with the built-in OpenAI Imagegen tool on 31 August 2026, with no reference photographs or named real people supplied. Resizing/compression produced the bundled WebP/JPEG files. No stock-photo library or third-party photographer's work was downloaded for these visuals.
+The workshop scene was created for this project with the built-in OpenAI Imagegen tool on August 31, 2026. No reference photographs or named real people were supplied. The two WebP files are resized versions of the same fictional adult-learning scene.
 
-- `assets/images/learning-workshop.webp` and `learning-workshop-small.webp`: one fictional adult learning scene, supplied at two sizes.
-- `assets/images/social-preview.jpg`: original Asterly typography artwork, optional for sharing previews.
+| File | Origin and use |
+| --- | --- |
+| `assets/images/learning-workshop.webp` | Original AI-generated workshop scene, 1200 px wide. |
+| `assets/images/learning-workshop-small.webp` | The same workshop scene, 640 px wide. |
+| `assets/images/social-preview.png` | Original AI-generated social artwork, edited with the built-in Imagegen tool on August 31, 2026, to show the Nuvessio brand. |
+| `assets/images/favicon.svg` | Original geometric vector mark with a descriptive title. |
 
-These are disclosed as AI-generated demonstration assets, not photographs of actual learners or staff. This provenance is not a claim of exclusive copyright, model releases, trademark clearance, or marketplace approval. The seller should check the chosen marketplace's current AI-content rules and disclose or replace these assets as required. Any replacement assets must permit the intended commercial redistribution, not only use in a finished website.
+The workshop image does not show actual students or staff. No third-party stock photographer's work was downloaded for these images. AI provenance is not a guarantee of exclusive copyright, model releases, trademark clearance, or marketplace approval. Check your marketplace's current AI-content rules and disclose or replace these images where required. Any replacement asset must permit the intended commercial redistribution, not just use in a finished website.
 
-### Workshop image: exact generation prompt
+### Workshop generation brief
 
-Use case: photorealistic-natural
+Summary of the original brief: a natural editorial photograph of exactly three fictional adult learners collaborating around an unbranded laptop in a bright studio. Warm cream walls, navy clothing, subtle terracotta details, soft daylight, and a landscape 3:2 composition. No children, real people's names, branding, text, or watermarks. The workshop artwork is unchanged in this release.
 
-Asset type: original premium editorial hero photograph for an adult education website template, Asterly Learning Studio.
+### Social artwork edit prompt
 
-Primary request: a candid adult learning workshop in a bright, warm, minimalist studio. Exactly three diverse fictional adults aged 22–35 collaborate naturally around a pale wood desk. In the foreground, a woman wearing a navy shirt looks at an unbranded silver laptop with a relaxed friendly smile. Two other adult peers are engaged nearby. Include a notebook, a small plant, a large side window, warm cream walls, and subtle muted terracotta details.
-
-Style/medium: photorealistic natural magazine photography; authentic, unstaged expressions; realistic skin, hair, hands, and anatomy; gently shallow depth of field.
-
-Composition/framing: landscape 3:2 photograph with useful crop-safe framing and faces centered. Keep all three people's faces comfortably inside the image, with natural conversational body language.
-
-Lighting/mood: natural side daylight, warm, calm, inviting, refined.
-
-Constraints: no text, no logos, no watermark, no school branding, no children, no floating UI. The people are fictional adults. Create one image.
-
-### Social artwork: exact generation prompt
-
-Use case: ads-marketing
-
-Asset type: landscape 3:2 branded social preview card for an education HTML template.
-
-Primary request: a cohesive premium quiet minimal editorial graphic for the brand asterly.
-
-Scene/backdrop: solid warm ivory background #faf8f4.
-
-Style/medium: refined flat graphic design, confident editorial typography, clean crisp edges, generous whitespace.
-
-Composition/framing: landscape 3:2 canvas; strong balanced typographic hierarchy; brand clearly visible; large headline arranged naturally over several lines; small supporting line; understated geometric asterisk motif.
-
-Color palette: deep navy #152d47 typography, restrained terracotta #b8522a and light peach #f5b794 accents on warm ivory #faf8f4.
-
-Text (verbatim, with exact punctuation): "asterly." and "Your next chapter starts with a new skill." and "LEARNING STUDIO".
-
-Constraints: Typography must be highly legible and spelled exactly. The lowercase brand is a-s-t-e-r-l-y followed by a full stop. Headline is the largest text. Only these three supplied text elements. No photos, no other text, no logos of others, no watermark, no busy ornamentation.
+Use case: text-localization
+Asset type: existing social preview artwork for a learning studio HTML template.
+Input image: the supplied local social-preview.jpg is the edit target.
+Primary request: replace only the small lowercase brand word in the upper-left corner with "nuvessio." (n-u-v-e-s-s-i-o followed by a period). This is a brand rename, not a redesign.
+Text to preserve exactly: "Your next chapter starts with a new skill." and "LEARNING STUDIO".
+Constraints: preserve the existing 3:2 landscape composition, warm ivory background, navy editorial typography, terracotta asterisk, peach shape, spacing and visual style. Keep the large headline and all other elements unchanged as closely as possible. No additional text, new objects, stock marks, or watermark. Brand must be spelled exactly "nuvessio." and the previous brand must not remain anywhere.

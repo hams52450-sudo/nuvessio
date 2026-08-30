@@ -1,4 +1,4 @@
-/* Asterly — small, dependency-free progressive enhancements. */
+/* Nuvessio — small, dependency-free progressive enhancements. */
 "use strict";
 
 (() => {
@@ -56,7 +56,7 @@
     document.querySelector("#privacy-note").open = true;
   });
 
-  const form = document.querySelector("#enquiry-form");
+  const form = document.querySelector("#inquiry-form");
   if (!form) return;
   const submitButton = form.querySelector('[type="submit"]');
   const submitLabel = form.querySelector(".submit-label");
@@ -68,7 +68,7 @@
 
   // The buyer supplies an endpoint accepting JSON and returning { "success": true }.
   // No API secrets belong here. Validation, spam protection, and email delivery are server responsibilities.
-  if (endpoint) formNote.textContent = "Your information will be sent to our enquiry service. Please read the information notice before submitting.";
+  if (endpoint) formNote.textContent = "Your information will be sent to our inquiry service. Please read the information notice before submitting.";
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -84,7 +84,7 @@
       return;
     }
     if (!endpoint) {
-      status.textContent = "Demo complete — nothing was sent or stored. The website owner can connect this form to an enquiry service using the README instructions.";
+      status.textContent = "Demo complete — nothing was sent or stored. The website owner can connect this form to an inquiry service using the README instructions.";
       return;
     }
 
@@ -105,13 +105,13 @@
       if (!response.ok) throw new Error("Request failed");
       const result = await response.json();
       if (result.success !== true) throw new Error("Unconfirmed delivery");
-      status.textContent = "Thank you — your enquiry was sent successfully. We’ll be in touch to help you find your next step.";
+      status.textContent = "Thank you — your inquiry was sent successfully. We’ll be in touch to help you find your next step.";
       form.reset();
     } catch (error) {
       status.classList.add("is-error");
       status.textContent = error.name === "AbortError"
         ? "We couldn’t confirm delivery before the request timed out. Your entries are still here. Please contact us by email before trying again."
-        : "We couldn’t confirm that your enquiry was sent. Your entries are still here. Please try later or contact us by email.";
+        : "We couldn’t confirm that your inquiry was sent. Your entries are still here. Please try later or contact us by email.";
     } finally {
       window.clearTimeout(timeout);
       sending = false;

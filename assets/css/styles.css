@@ -4,6 +4,23 @@
              10 Responsive · 11 Motion / Print */
 
 /* 01 — DESIGN TOKENS: customize the whole palette here. */
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Cyrillic.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   color-scheme: light;
   --color-ink: #152d47;
@@ -17,8 +34,8 @@
   --color-peach: #f7e7da;
   --color-sage: #e8eee6;
   --color-error: #a72b30;
-  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-editorial: Georgia, "Times New Roman", serif;
+  --font-body: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-editorial: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --container: 1200px;
   --section-space: clamp(64px, 7.5vw, 112px);
 }
@@ -50,8 +67,7 @@ h1 { font-size: clamp(48px, 5.2vw, 72px); line-height: 1.08; letter-spacing: -.0
 h2 { font-size: clamp(34px, 3.4vw, 46px); line-height: 1.17; letter-spacing: -.045em; }
 h3 { font-size: 22px; line-height: 1.35; letter-spacing: -.025em; }
 em { font-family: var(--font-editorial); font-weight: 400; }
-.button { display: inline-flex; justify-content: center; align-items: center; gap: 22px; min-height: 52px; border: 1px solid transparent; border-radius: 7px; padding: 13px 22px; font-size: 13px; font-weight: 700; line-height: 1.5; transition: background .2s ease, transform .2s ease, border-color .2s ease; }
-.button:hover { transform: translateY(-2px); }
+.button { display: inline-flex; justify-content: center; align-items: center; gap: 22px; min-height: 52px; border: 1px solid transparent; border-radius: 7px; padding: 13px 22px; font-size: 13px; font-weight: 700; line-height: 1.5; transition: background .2s ease, transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
 .button-dark { background: var(--color-ink); color: var(--color-white); }
 .button-dark:hover { background: #254868; }
 .button-small { min-height: 44px; padding: 10px 17px; gap: 17px; font-size: 12px; }
@@ -76,7 +92,7 @@ em { font-family: var(--font-editorial); font-weight: 400; }
 .primary-nav > a { font-size: 12px; font-weight: 700; }
 .primary-nav > a:not(.button) { padding-block: 14px; }
 .primary-nav > a:not(.button):hover { color: var(--color-accent); }
-.menu-toggle { align-items: center; gap: 9px; padding: 10px 12px; border: 1px solid var(--color-line); border-radius: 6px; background: transparent; font-size: 12px; font-weight: 700; min-height: 44px; }
+.menu-toggle { align-items: center; gap: 9px; padding: 10px 12px; border: 1px solid var(--color-line); border-radius: 6px; background: transparent; font-size: 12px; font-weight: 700; min-height: 44px; transition: background .2s ease, transform .2s ease; }
 .menu-lines { width: 18px; height: 12px; border-block: 1.5px solid currentColor; position: relative; }
 .menu-lines::after { content: ""; position: absolute; top: 4px; left: 0; width: 18px; border-top: 1.5px solid currentColor; }
 
@@ -110,7 +126,7 @@ em { font-family: var(--font-editorial); font-weight: 400; }
 /* 05 — COURSES */
 .courses-section { background: var(--color-white); }
 .course-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start; }
-.course-card { border: 1px solid var(--color-line); border-radius: 14px; overflow: hidden; }
+.course-card { border: 1px solid var(--color-line); border-radius: 14px; overflow: hidden; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
 .course-art { position: relative; display: flex; flex-direction: column; justify-content: space-between; height: 204px; padding: 21px 24px; overflow: hidden; }
 .course-art-english { background: var(--color-peach); }
 .course-art-code { background: var(--color-blue-light); }
@@ -153,7 +169,7 @@ details[open] > summary > span { transform: rotate(45deg); }
 .step-number { display: grid; place-items: center; flex-shrink: 0; width: 33px; height: 33px; border: 1px solid #53667d; border-radius: 50%; color: var(--color-accent-light); font-size: 10px; }
 .approach-steps h3 { font-size: 15px; letter-spacing: -.01em; }
 .approach-steps p { font-size: 12px; color: #c2cedb; margin-top: 6px; max-width: 330px; }
-.learning-panel { padding: 30px; border: 1px solid #4a5f75; border-radius: 16px; background: #203d58; box-shadow: 0 25px 50px #06142326; }
+.learning-panel { padding: 30px; border: 1px solid #4a5f75; border-radius: 16px; background: #203d58; box-shadow: 0 25px 50px #06142326; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
 .panel-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .panel-kicker { font-size: 8px; font-weight: 800; letter-spacing: .1em; color: #d3dfe8; }
 .sample-tag { border: 1px solid #637488; border-radius: 4px; padding: 2px 7px; font-size: 8px; color: #d3dfe8; }
@@ -186,7 +202,7 @@ details[open] > summary > span { transform: rotate(45deg); }
 .stories-section .section-heading { margin-bottom: 19px; }
 .demo-caption { color: var(--color-muted); font-size: 10px; margin-bottom: 24px; }
 .story-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
-.story-card { padding: 26px; border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); display: flex; flex-direction: column; }
+.story-card { padding: 26px; border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); display: flex; flex-direction: column; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
 .quote-mark { height: 45px; font-family: var(--font-editorial); font-size: 63px; line-height: 1; color: var(--color-accent); }
 .story-card blockquote { font-size: 14px; line-height: 1.95; padding-top: 9px; flex: 1; }
 .story-card figcaption { display: flex; align-items: center; gap: 11px; margin-top: 26px; padding-top: 21px; border-top: 1px solid var(--color-line); }
@@ -393,9 +409,27 @@ details[open] > summary > span { transform: rotate(45deg); }
 }
 
 /* 11 — MOTION PREFERENCES & PRINT */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .58s cubic-bezier(.22,.61,.36,1), transform .58s cubic-bezier(.22,.61,.36,1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (hover: hover) and (pointer: fine) {
+  .button:not(:disabled):hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(21,45,71,.12); }
+  .button:not(:disabled):active { transform: translateY(0); box-shadow: none; }
+  .course-card:hover, .story-card:hover { transform: translateY(-3px); border-color: #c7cecf; box-shadow: 0 14px 30px rgba(21,45,71,.08); }
+  .learning-panel:hover { transform: translateY(-3px); border-color: #60768d; box-shadow: 0 28px 55px rgba(6,20,35,.2); }
+  .language-switcher button:hover, .menu-toggle:hover { transform: translateY(-1px); }
+  .language-switcher button[aria-pressed="false"]:hover, .menu-toggle:hover { background: rgba(21,45,71,.06); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal-on-scroll { opacity: 1; transform: none; }
 }
 @media print {
   .site-header { position: static; }
@@ -408,7 +442,7 @@ details[open] > summary > span { transform: rotate(45deg); }
 
 /* Multilingual navigation and text expansion. */
 .language-switcher { display:flex; align-items:center; gap:2px; flex-shrink:0; order:2; }
-.language-switcher button { min-width:36px; min-height:44px; padding:5px; border:0; border-radius:5px; background:transparent; font-size:12px; font-weight:700; }
+.language-switcher button { min-width:36px; min-height:44px; padding:5px; border:0; border-radius:5px; background:transparent; font-size:12px; font-weight:700; transition:background .2s ease, transform .2s ease; }
 .language-switcher button[aria-pressed="true"] { color:var(--color-white); background:var(--color-ink); }
 .language-switcher > span { font-size:11px; color:var(--color-muted); }
 .header-inner { gap:16px; flex-wrap:wrap; }

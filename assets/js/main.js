@@ -58,6 +58,51 @@
     document.querySelector("#privacy-note").open = true;
   });
 
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const revealTargets = document.querySelectorAll([
+    ".hero-copy",
+    ".hero-visual",
+    ".promise-strip > *",
+    ".section-heading",
+    ".course-card",
+    ".approach-copy",
+    ".learning-panel",
+    ".story-card",
+    ".faq-intro",
+    ".faq-list",
+    ".cta-inner",
+    ".contact-copy",
+    ".contact-form",
+    ".footer-top",
+    ".footer-bottom"
+  ].join(","));
+
+  if (!reducedMotion.matches && "IntersectionObserver" in window) {
+    const reveal = (element) => {
+      element.classList.add("is-visible");
+      window.setTimeout(() => {
+        element.classList.remove("reveal-on-scroll", "is-visible");
+        element.style.removeProperty("--reveal-delay");
+      }, 900);
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        reveal(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+    revealTargets.forEach((element) => {
+      const siblings = Array.from(element.parentElement?.children || []).filter((item) => item.matches?.(".course-card, .story-card"));
+      const siblingIndex = siblings.indexOf(element);
+      if (siblingIndex > 0) element.style.setProperty("--reveal-delay", `${Math.min(siblingIndex, 2) * 70}ms`);
+      element.classList.add("reveal-on-scroll");
+      element.addEventListener("focusin", () => reveal(element), { once: true });
+      observer.observe(element);
+    });
+  }
+
   const form = document.querySelector("#inquiry-form");
   if (!form) return;
   const submitButton = form.querySelector('[type="submit"]');

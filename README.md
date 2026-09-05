@@ -4,7 +4,7 @@
 
 A single-page template for a learning studio, tutoring business, or small training provider. Version 1.1.0. Available in English, Uzbek, and Russian.
 
-**Plain HTML, CSS, and JavaScript. No framework, installation, build step, or subscription required.** Images are included locally. Text uses fonts already available on each visitor's device; no font files or external font services are included. The default demo makes no third-party network requests.
+**Plain HTML, CSS, and JavaScript. No framework, installation, build step, or subscription required.** Images and the Manrope variable font are included locally. The default demo makes no third-party network requests.
 
 ## 1. Open the template
 
@@ -23,7 +23,8 @@ nuvessio-template/
 ├── ASSET-NOTICES.md              Asset origin and usage notes
 └── assets/
     ├── css/styles.css           Colors, typography, layout, responsive rules
-    ├── js/main.js               Mobile menu, course selection, demo form
+    ├── js/main.js               Mobile menu, scroll motion, course selection, demo form
+    ├── fonts/                   Manrope variable font and OFL license
     └── images/
         ├── favicon.svg          Browser tab icon
         ├── learning-workshop.webp
@@ -39,13 +40,13 @@ nuvessio-template/
 | Logo and tab icon | Edit the header/footer `.brand` markup and `assets/images/favicon.svg`. |
 | Text, courses, FAQs, stories | Edit the labeled sections in `index.html`. |
 | Colors | Change the `:root` variables near the top of `assets/css/styles.css`. |
-| Fonts | Edit `--font-body` and `--font-editorial` in the CSS. The defaults use system fonts and require no downloads. |
+| Fonts | Edit `--font-body` and `--font-editorial` in the CSS. Manrope is included locally with system fallbacks. |
 | Spacing and page width | Edit `--section-space` and `--container` in the CSS. |
 | Contact information | Replace both the visible `hello@example.com` and the matching `mailto:` address in `index.html`. |
 | Main photo | Replace both workshop images and update their `src`, `srcset`, dimensions, and `alt` text. |
 | Social sharing image | Replace `assets/images/social-preview.png` with your own branded image; update its URL and image descriptions in the page metadata. |
 
-The palette is navy `#152d47`, terracotta `#b8522a`, peach `#f5b794`, and ivory `#faf8f4`. Check text contrast after changing colors. System fonts can look slightly different across operating systems. Georgia remains the system serif choice for italic accents.
+The palette is navy `#152d47`, terracotta `#b8522a`, peach `#f5b794`, and ivory `#faf8f4`. Check text contrast after changing colors. Manrope is used throughout, including italic accents, with system fonts as fallbacks.
 
 For the main photo, export the same landscape image at 1200 px and 640 px wide. Keep faces or other important details near the center. Update the descriptive alt text and remove the AI disclosure only if your replacement is not AI-generated. Use assets that allow redistribution in templates.
 

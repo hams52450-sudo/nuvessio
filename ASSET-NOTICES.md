@@ -8,9 +8,9 @@ Nuvessio is a fictional demonstration brand, not a claim of a real learning prov
 
 The seller supplies the applicable template license. These notices describe asset provenance and do not assign an open-source license to the template code.
 
-## System fonts only
+## Manrope font
 
-No third-party font files are included. Body text uses a system font stack; italic accents use Georgia or a locally available serif fallback. Fonts are selected from the visitor's device, not downloaded by this template. No font license file needs to be copied or redistributed with this package. If you add a web font, check its separate redistribution requirements.
+The bundled `assets/fonts/Manrope-Latin.woff2` and `assets/fonts/Manrope-Cyrillic.woff2` variable-font subsets come from Google Fonts and are distributed under the SIL Open Font License 1.1. The complete license is included at `assets/fonts/OFL.txt`. The site serves both subsets locally and uses system fonts only as fallbacks.
 
 ## AI-generated demonstration images
 

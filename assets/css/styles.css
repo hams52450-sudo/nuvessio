@@ -405,3 +405,42 @@ details[open] > summary > span { transform: rotate(45deg); }
   body { font-size: 11px; }
   a { text-decoration: underline; }
 }
+
+/* Multilingual navigation and text expansion. */
+.language-switcher { display:flex; align-items:center; gap:2px; flex-shrink:0; order:2; }
+.language-switcher button { min-width:36px; min-height:44px; padding:5px; border:0; border-radius:5px; background:transparent; font-size:12px; font-weight:700; }
+.language-switcher button[aria-pressed="true"] { color:var(--color-white); background:var(--color-ink); }
+.language-switcher > span { font-size:11px; color:var(--color-muted); }
+.header-inner { gap:16px; flex-wrap:wrap; }
+.primary-nav { gap:18px; margin-left:auto; }
+.hero-copy, .hero-visual, .approach-copy, .learning-panel, .faq-intro, .faq-list, .contact-copy, .contact-form { min-width:0; }
+h1,h2,h3,p,a,blockquote,label,summary { overflow-wrap:break-word; }
+.hero-float { max-width:calc(100% + 12px); }
+.image-caption { max-width:100%; }
+:lang(uz) .hero h1, :lang(ru) .hero h1 { font-size:clamp(36px,4.5vw,64px); }
+:lang(ru) .course-art-english .course-letter { font-size:64px; }
+@media (min-width:801px) and (max-width:1200px) {
+ .header-inner { padding-block:12px; }
+ .primary-nav { order:3; flex-basis:100%; justify-content:center; flex-wrap:wrap; }
+ .language-switcher { margin-left:auto; }
+ html { scroll-padding-top:155px; }
+}
+@media (max-width:800px) {
+ .language-switcher { order:0; margin-left:auto; }
+ .menu-toggle { order:1; }
+ .primary-nav { order:3; margin-left:0; }
+ .header-inner > .brand { font-size:26px; gap:4px; }
+ .header-inner { gap:8px; }
+ .menu-toggle { padding-inline:8px; }
+ .menu-lines { flex-shrink:0; }
+}
+@media (max-width:420px) {
+ .header-inner > .brand { flex-basis:calc(100% - 140px); }
+ .menu-toggle { margin-left:auto; }
+ html { scroll-padding-top:145px; }
+ .hero-float { position:relative; left:0; bottom:auto; margin-top:-10px; }
+ .image-caption { position:static; margin-top:10px; }
+ .hero-visual { padding-bottom:0; }
+ .chart { gap:8px; }
+}
+@media print { .language-switcher { display:none; } }

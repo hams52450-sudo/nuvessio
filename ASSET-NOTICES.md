@@ -2,7 +2,7 @@
 
 ## Template code and demonstration content
 
-The HTML, CSS, JavaScript, geometric asterisk mark, interface SVG icons, and course illustrations were created for this separate learning-studio template. Its educational theme and navy/terracotta visual identity build on the owner's original practice project. No third-party component library, icon library, or stock-photo collection is bundled.
+The HTML, CSS, JavaScript, original continuous N monogram, interface SVG icons, and course illustrations were created for this separate learning-studio template. Its educational theme and navy/terracotta visual identity build on the owner's original practice project. No third-party component library, icon library, or stock-photo collection is bundled.
 
 Nuvessio is a fictional demonstration brand, not a claim of a real learning provider. Names, quotes, course durations, and the learning plan are illustrative. They are not verified testimonials, accreditation, or business results. A preliminary name search is not legal trademark clearance; the seller or buyer must arrange any clearance needed before commercial brand use.
 
@@ -20,8 +20,8 @@ The workshop scene was created for this project with the built-in OpenAI Imagege
 | --- | --- |
 | `assets/images/learning-workshop.webp` | Original AI-generated workshop scene, 1200 px wide. |
 | `assets/images/learning-workshop-small.webp` | The same workshop scene, 640 px wide. |
-| `assets/images/social-preview.png` | Original AI-generated social artwork, edited with the built-in Imagegen tool on August 31, 2026, to show the Nuvessio brand. |
-| `assets/images/favicon.svg` | Original geometric vector mark with a descriptive title. |
+| `assets/images/social-preview.png` | Original AI-generated social artwork, updated with the built-in Imagegen tool on September 5, 2026, to use the original Nuvessio N monogram. |
+| `assets/images/favicon.svg` | Original Nuvessio N monogram with a descriptive title. |
 
 The workshop image does not show actual students or staff. No third-party stock photographer's work was downloaded for these images. AI provenance is not a guarantee of exclusive copyright, model releases, trademark clearance, or marketplace approval. Check your marketplace's current AI-content rules and disclose or replace these images where required. Any replacement asset must permit the intended commercial redistribution, not just use in a finished website.
 
@@ -29,11 +29,11 @@ The workshop image does not show actual students or staff. No third-party stock 
 
 Summary of the original brief: a natural editorial photograph of exactly three fictional adult learners collaborating around an unbranded laptop in a bright studio. Warm cream walls, navy clothing, subtle terracotta details, soft daylight, and a landscape 3:2 composition. No children, real people's names, branding, text, or watermarks. The workshop artwork is unchanged in this release.
 
-### Social artwork edit prompt
+### Social artwork logo update
 
-Use case: text-localization
+Use case: precise-object-edit
 Asset type: existing social preview artwork for a learning studio HTML template.
 Input image: the supplied local social-preview.jpg is the edit target.
-Primary request: replace only the small lowercase brand word in the upper-left corner with "nuvessio." (n-u-v-e-s-s-i-o followed by a period). This is a brand rename, not a redesign.
-Text to preserve exactly: "Your next chapter starts with a new skill." and "LEARNING STUDIO".
-Constraints: preserve the existing 3:2 landscape composition, warm ivory background, navy editorial typography, terracotta asterisk, peach shape, spacing and visual style. Keep the large headline and all other elements unchanged as closely as possible. No additional text, new objects, stock marks, or watermark. Brand must be spelled exactly "nuvessio." and the previous brand must not remain anywhere.
+Primary request: replace only the large terracotta asterisk on the right with the original continuous N monogram supplied as a project-made reference.
+Text preserved exactly: "nuvessio.", "Your next chapter starts with a new skill.", and "LEARNING STUDIO".
+Constraints: preserve the existing 3:2 landscape composition, warm ivory background, navy editorial typography, peach shape, spacing and visual style. No additional text, stock marks, or watermark. The old asterisk and previous brand must not remain anywhere.

@@ -1,10 +1,8 @@
 # Nuvessio — Learning Studio HTML Template
 
-[Live demo](https://hams52450-sudo.github.io/asterly/)
+[Live demo](https://hams52450-sudo.github.io/nuvessio/)
 
-This repository is the hosted demonstration. Its domain settings are active for the demo URL. The separate commercial package uses commented, buyer-editable placeholders. The guide below describes that buyer package.
-
-A single-page template for a learning studio, tutoring business, or small training provider. Version 1.1.0. Written in US English.
+A single-page template for a learning studio, tutoring business, or small training provider. Version 1.1.0. Available in English, Uzbek, and Russian.
 
 **Plain HTML, CSS, and JavaScript. No framework, installation, build step, or subscription required.** Images are included locally. Text uses fonts already available on each visitor's device; no font files or external font services are included. The default demo makes no third-party network requests.
 
@@ -106,6 +104,15 @@ For local HTTP testing, use your editor's local server. If Python is installed, 
 
 This package does not promise business results or marketplace acceptance. The seller supplies the applicable marketplace or end-user license; no open-source license is assigned to the template code here.
 
-## Demo hosting — maintainers only
+## Multilingual update — EN / UZ / RU
 
-This demo is published from the main branch, root folder, with `.nojekyll`. Its existing URL is retained to avoid breaking shared links. The commercial package has no repository-specific setup or preset demo domain. When changing the demo domain, update its active canonical, Open Graph, and social image URLs in `index.html`.
+The original English page is preserved. Uzbek and Russian are available in the header. No dependencies or build step were added.
+
+- `assets/js/i18n.js` contains translation rows: original English key, Uzbek, Russian. When editing source copy, update the matching key and both translations together.
+- Load `i18n.js` before `main.js`, as in the supplied HTML.
+- `nuvessio.language` stores only `en`, `uz`, or `ru` in localStorage. Invalid values fall back to English; unavailable storage does not stop the page from working.
+- Text nodes are updated without replacing controls or icons. User entries and expanded sections survive switching.
+- Form validation and delivery statuses use the active language. The form remains in demo mode until its endpoint is configured.
+- Language selection needs JavaScript. When JavaScript is disabled, the original English content stays available and the language controls are hidden.
+- Test the extracted folder through a local HTTP server or your normal web host for consistent origin-based storage. Storage for direct file URLs depends on the browser.
+- This update does not publish or modify a live site.

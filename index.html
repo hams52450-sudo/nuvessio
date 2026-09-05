@@ -13,13 +13,14 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:image:alt" content="Nuvessio — Your next chapter starts with a new skill.">
   <meta name="twitter:image:alt" content="Nuvessio — Your next chapter starts with a new skill.">
-  <!-- LIVE DEMO SETTINGS: the commercial package uses commented buyer placeholders. -->
-  <link rel="canonical" href="https://hams52450-sudo.github.io/asterly/">
-  <meta property="og:url" content="https://hams52450-sudo.github.io/asterly/">
-  <meta property="og:image" content="https://hams52450-sudo.github.io/asterly/assets/images/social-preview.png">
-  <meta name="twitter:image" content="https://hams52450-sudo.github.io/asterly/assets/images/social-preview.png">
+  <!-- LIVE DEMO SETTINGS -->
+  <link rel="canonical" href="https://hams52450-sudo.github.io/nuvessio/">
+  <meta property="og:url" content="https://hams52450-sudo.github.io/nuvessio/">
+  <meta property="og:image" content="https://hams52450-sudo.github.io/nuvessio/assets/images/social-preview.png">
+  <meta name="twitter:image" content="https://hams52450-sudo.github.io/nuvessio/assets/images/social-preview.png">
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/i18n.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
@@ -29,7 +30,7 @@
     <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
     <symbol id="icon-diagonal" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
     <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
-    <symbol id="icon-spark" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M5 5l14 14M5 19 14-14"/></symbol>
+    <symbol id="icon-nuvessio" viewBox="0 0 24 24"><path d="M5 19V7a2 2 0 0 1 3.7-1.05l6.6 12.1A2 2 0 0 0 19 17V5"/></symbol>
     <symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 6v15M3 3c4 0 6 1 9 3 3-2 5-3 9-3v15c-4 0-6 1-9 3-3-2-5-3-9-3Z"/></symbol>
     <symbol id="icon-people" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 4a3 3 0 0 1 0 6m2 5a5 5 0 0 1 3 4v2"/></symbol>
     <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M21 11a9 9 0 0 1-9 9H3l2-5a9 9 0 1 1 16-4Z"/><path d="M8 10h8M8 14h5"/></symbol>
@@ -40,9 +41,14 @@
     <div class="container header-inner">
       <!-- BRAND: replace the name here and in the footer, metadata, and favicon. -->
       <a class="brand" href="#home" aria-label="Nuvessio home">
-        <span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#icon-spark"/></svg></span>
+        <span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#icon-nuvessio"/></svg></span>
         <span>nuvessio<span class="brand-dot">.</span></span>
       </a>
+      <div class="language-switcher" hidden role="group" aria-label="Language">
+        <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button><span aria-hidden="true">/</span>
+        <button type="button" data-language="uz" lang="uz" aria-label="O‘zbekcha" aria-pressed="false">UZ</button><span aria-hidden="true">/</span>
+        <button type="button" data-language="ru" lang="ru" aria-label="Русский" aria-pressed="false">RU</button>
+      </div>
       <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" hidden>
         <span class="menu-lines" aria-hidden="true"></span><span class="menu-label">Menu</span>
       </button>
@@ -76,7 +82,7 @@
             <span class="photo-label">GOOD COMPANY. GREAT POSSIBILITIES.</span>
           </div>
           <div class="hero-float">
-            <span class="float-icon"><svg class="icon" aria-hidden="true"><use href="#icon-spark"/></svg></span>
+            <span class="float-icon"><svg class="icon" aria-hidden="true"><use href="#icon-nuvessio"/></svg></span>
             <div><strong>A small step. A fresh start.</strong><span>Let’s see what you can do.</span></div>
           </div>
           <p class="image-caption">A space to ask questions. And surprise yourself.</p>
@@ -202,7 +208,7 @@
           <p class="eyebrow">04 / Your next chapter</p><h2 id="contact-title">Let’s start with<br><em>a conversation.</em></h2>
           <p>Tell us a little about yourself and what you’d like to learn. We’ll help you find a course, a group, and a starting point that make sense for you.</p>
           <div class="contact-detail"><svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg><div><span>Prefer a simple hello?</span><!-- CONTACT: replace this reserved example address in both text and href. --><a href="mailto:hello@example.com">hello@example.com</a><small>Demo contact address — replace before publishing.</small></div></div>
-          <div class="contact-aside"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#icon-spark"/></svg></span><p>No perfect plan required.<br><strong>Curiosity is a good enough start.</strong></p></div>
+          <div class="contact-aside"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#icon-nuvessio"/></svg></span><p>No perfect plan required.<br><strong>Curiosity is a good enough start.</strong></p></div>
         </div>
         <!-- FORM SETUP: leave data-endpoint empty for honest demo mode.
              To receive inquiries, set it to your HTTPS JSON form endpoint. See README. -->
@@ -222,11 +228,10 @@
           <noscript><p class="form-note">JavaScript is off, so this demo form cannot submit. You can still browse the entire page and use the email link.</p></noscript>
         </form>
       </div>
-      <div class="container privacy-container"><details id="privacy-note" class="privacy-note"><summary>About your information in this template demo</summary><p>In this preview, the form runs only in your browser. Nuvessio does not transmit your entries, save them in browser storage, or use analytics or tracking cookies. This is sample content, not a real learning provider. Website owners must connect a form service and replace this notice with information about their actual data practices before accepting inquiries.</p></details></div>
+      <div class="container privacy-container"><details id="privacy-note" class="privacy-note"><summary>About your information in this template demo</summary><p>In this preview, the form runs only in your browser. Nuvessio does not transmit your entries, save them in browser storage, or use analytics or tracking cookies. Only your language preference is saved on this device. This is sample content, not a real learning provider. Website owners must connect a form service and replace this notice with information about their actual data practices before accepting inquiries.</p></details></div>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container"><div class="footer-top"><div><a class="brand" href="#home" aria-label="Nuvessio back to top"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#icon-spark"/></svg></span><span>nuvessio<span class="brand-dot">.</span></span></a><p>Small groups. Big possibilities.</p></div><nav class="footer-nav" aria-label="Footer navigation"><a href="#courses">Find your course</a><a href="#approach">Our approach</a><a href="#contact">Say hello <span aria-hidden="true">↗</span></a></nav><a class="back-top" href="#home">Back to top <span aria-hidden="true">↑</span></a></div><div class="footer-bottom"><p>© <span data-year>2026</span> Nuvessio Learning Studio.</p><p>Template demo · Courses and stories are illustrative. Imagery is AI-generated.</p></div></div></footer>
+  <footer class="site-footer"><div class="container"><div class="footer-top"><div><a class="brand" href="#home" aria-label="Nuvessio back to top"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#icon-nuvessio"/></svg></span><span>nuvessio<span class="brand-dot">.</span></span></a><p>Small groups. Big possibilities.</p></div><nav class="footer-nav" aria-label="Footer navigation"><a href="#courses">Find your course</a><a href="#approach">Our approach</a><a href="#contact">Say hello <span aria-hidden="true">↗</span></a></nav><a class="back-top" href="#home">Back to top <span aria-hidden="true">↑</span></a></div><div class="footer-bottom"><p>© <span data-year>2026</span> Nuvessio Learning Studio.</p><p>Template demo · Courses and stories are illustrative. Imagery is AI-generated.</p></div></div></footer>
 </body>
 </html>
-

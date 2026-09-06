@@ -66,7 +66,7 @@ h1, h2, h3 { font-weight: 700; }
 h1 { font-size: clamp(48px, 5.2vw, 72px); line-height: 1.08; letter-spacing: -.056em; }
 h2 { font-size: clamp(34px, 3.4vw, 46px); line-height: 1.17; letter-spacing: -.045em; }
 h3 { font-size: 22px; line-height: 1.35; letter-spacing: -.025em; }
-em { font-family: var(--font-editorial); font-weight: 400; }
+em { font-family: var(--font-editorial); font-style: normal; font-weight: 400; }
 .button { display: inline-flex; justify-content: center; align-items: center; gap: 22px; min-height: 52px; border: 1px solid transparent; border-radius: 7px; padding: 13px 22px; font-size: 13px; font-weight: 700; line-height: 1.5; transition: background .2s ease, transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
 .button-dark { background: var(--color-ink); color: var(--color-white); }
 .button-dark:hover { background: #254868; }
@@ -132,10 +132,10 @@ em { font-family: var(--font-editorial); font-weight: 400; }
 .course-art-code { background: var(--color-blue-light); }
 .course-art-math { background: var(--color-sage); }
 .art-label { font-size: 8px; font-weight: 800; letter-spacing: .1em; position: relative; z-index: 1; }
-.course-letter { align-self: center; font-family: var(--font-editorial); font-size: 82px; font-style: italic; line-height: 1; letter-spacing: -.07em; }
+.course-letter { align-self: center; font-family: var(--font-editorial); font-size: 82px; font-style: normal; line-height: 1; letter-spacing: -.07em; }
 .course-letter > span { color: var(--color-accent); }
 .code-letter { font-family: var(--font-body); font-weight: 500; font-size: 77px; font-style: normal; letter-spacing: -.1em; }
-.math-letter { font-size: 100px; font-style: italic; padding-right: 20px; }
+.math-letter { font-size: 100px; font-style: normal; padding-right: 20px; }
 .math-letter > span { position: relative; top: -3px; font-size: 77px; color: #48624f; }
 .art-foot { font-size: 10px; }
 .art-number { position: absolute; right: 20px; bottom: 19px; font-size: 10px; font-weight: 700; }
